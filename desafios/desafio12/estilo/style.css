@@ -19,7 +19,9 @@ header {
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
-    /*dfsdfdfsdfsdfdfdfsdfdsf*/
+    /* font-variant: small-caps; essa é uma variante de fonte q coloca tudo em maiúsculo, mas as letras iniciais são ainda maiores doq as outras maiúsculas */
+    text-transform: uppercase;
+    /* text-transform: uppercase; transforma o texto todo em maiúsculo */
 }
 
 header > p {
