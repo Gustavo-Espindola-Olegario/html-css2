@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias Responsivas em HTML</title>
+</head>
+<body>
+    <h1>Imagens Dinâmica</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium, cumque impedit provident blanditiis odio repellat voluptatem ipsa officia est debitis nesciunt doloremque natus nulla corrupti eligendi iure dolores facilis.</p>
+
+    <picture>
+        <source media="(max-width: 330px )" srcset="imagens/foto-mi.png" type="image/png">
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1028px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Foto Grande">
+    </picture>
+    <h1>Reproduzindo aúdio</h1>
+    <p>Reproduzindo aídio em HTML5</p>
+    <audio src="audio-music.mp3" controls autoplay></audio>
+    <!-- MP3 WAV OGG -->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="audio-music2.mp3" type="audio/mpeg">
+        <source src="audio-music2.ogg" type="audio/ogg">
+        <source src="audio-music2.wav" type="audio/wav">
+        <p>Seu navegador não suporta o aúdio. Baixe agora, <a href="audio-music2.mp3">clique aqui</a></p>
+    </audio>
+</body>
+</html>

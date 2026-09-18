@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+        
+            font-family: Arial, Helvetica, sans-serif;
+            /*  Medidas Absolutas
+                cm, mm, in, px, pt, pc
+                centímetros, milímetros, polegadas, pixels, pontos, paica
+
+                Medidas Relativas
+                em, ex, rem, vw, vh, %
+                em = relativa ao tamanho da fonte do elemento pai, geralmente fixada como 16px.
+                ex = medida relativa a altura minúscula do x de uma fonte
+                rem = medida relativa ao tamanho da fonte do elemento pai <html>.
+                vw = medida relativa ao Viewport Width (Largura da Janela de Visualização), ou seja, largura total da tela do dispositivo.
+                vh = medida relativa ao Viewport Height (Altura da Janela de Visualização), ou seja, altura total da tela do dispositivo.
+                % = medida relativa coringa no CSS. O comportamento dela muda dependendo da propriedade onde você a aplica, ou seja, se o elemento pai tem 16px, definir 50% no filho fará a fonte ter 8px.
+
+                Recomendação oficial: Usar em ou px.
+            */
+            font-size: 1.1em;
+            /* lighter normal bold bolder */
+        }
+        h1{
+            /* Shorthand font
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+            */
+            /* font: font-style font-weight font-size font-family; */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+        h2 {
+            font: bold 2em 'Work Sans';
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, est quod natus architecto perferendis maiores officia aspernatur blanditiis illo. Quo hic dolores est obcaecati illo laborum ea deleniti cupiditate facilis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eaque ipsum architecto rerum qui corporis, fugiat inventore vero dolore asperiores ut quaerat neque, ratione itaque facere nostrum, quod corrupti aliquam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, quo libero? Recusandae, nulla ea dolore excepturi laborum, aliquid animi, sit vero laboriosam ut explicabo similique itaque! Minus consectetur excepturi distinctio!</p>
+    <h2>Subtítulo do exercicio</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maxime accusamus quisquam nulla doloremque et maiores quibusdam, exercitationem quis amet consequatur eveniet eos id. Nulla sit sapiente illum fugit corporis!</p>
+</body>
+</html>

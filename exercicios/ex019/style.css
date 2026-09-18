@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body {
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+# é pra ID, e pode apenas um por arquivo html
+. é pra classe, e pode vários elementos serem da mesma classe, inclusive um elemento pode ser de 2 classe ao mesmo tempo!
+
+
+*/
+
+
+h1 {
+    color: rgb(0, 110, 74);
+}
+
+#principal {
+    color: aliceblue;
+    background-color: darkgreen;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(3, 0, 43);
+}
+
+.basico {
+    color: rgb(3, 255, 3);
+}
+
+.intermediario {
+    color: rgb(255, 255, 3);
+}
+
+.avancado {
+    color: rgb(255, 4, 4);
+}
+
+.destaque {
+    background-color: rgb(255, 255, 128);
+}
+.destaque2{
+    padding: 5px;
+}
