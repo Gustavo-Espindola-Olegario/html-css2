@@ -44,7 +44,7 @@ Continuação do curso de HTML e CSS Parte 2
 <a href="exercicios/ex017/font02.html">Exercicio 17 B</a>
 <br>
 <a href="exercicios/ex018/index.html">Exercicio 18 A</a>
-<a href="exercicios/ex018/index.html">Exercicio 18 B</a>
+<a href="exercicios/ex018/fonte02.html">Exercicio 18 B</a>
 <br>
 <a href="exercicios/ex019/seletor01.html">Exercicio 19</a>
 <br>
