@@ -64,6 +64,12 @@ Continuação do curso de HTML e CSS Parte 2
 <br>
 
 
+<br>
+<a href="desafios/d005/index.html">Desafio 5</a>
+<a href="desafios/d006/index.html">Desafio 6</a>
+<a href="desafios/d009/index.html">Desafio 9</a>
+<a href="desafios/d010/index.html">Desafio 10</a>
+<a href="desafios/d012/index.html">Desafio 12</a>
 
 
 

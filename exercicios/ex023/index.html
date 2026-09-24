@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        /*
+        hierarquia da table 
+        -> table row (linha da tabela) 
+        -> th (table header) 
+        -> table data (dado da tabela)
+        */
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .linha-especial {
+            background-color: aqua;
+        }
+        td {
+            border: 1px solid black;
+            padding: 3px;
+            width: 100px;
+            height: 80px;
+            vertical-align: middle; /* alinhamento vertical(top, middle e bottom)*/
+        }
+        .dado-especial {
+            background-color: blueviolet;
+        }
+        .numero {
+            text-align: right ;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td class="numero">C3</td>
+        </tr>
+        <tr class="linha-especial">
+            <td>A4</td>
+            <td>B4</td>
+            <td class="numero">C4</td>
+        </tr>
+        <tr>
+            <td class="dado-especial">A4</td>
+        </tr>
+    </table>
+</body>
+</html>
