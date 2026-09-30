@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem em células na Tabelas</title>
+    <STYle>
+        table {
+            border-collapse: collapse;
+            font-size: 1.5em;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        /*
+        colspan é pra mesclar colunas
+        rowspan é pra mesclar linhas
+        */
+    </STYle>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+        <tr>
+            <td rowspan="2">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td colspan="2">J</td>
+            <Td>L</Td>
+        </tr>
+    </table>
+</body>
+</html>

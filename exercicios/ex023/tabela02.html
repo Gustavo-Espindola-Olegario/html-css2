@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Grandes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 450px;
+            position: relative;
+        }
+        thead, tfoot {
+            background-color: lightblue;
+        }
+        td,th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .num {
+            text-align: right;
+        }
+        section {
+            font-size: 27px;
+            font-weight: bold;
+            background-color: lightgray;
+            padding: 13px;
+            display: inline-block;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: lightblue;
+        }
+
+        tbody tr:nth-child(odd) {
+            font-weight: bolder;
+            font-style: italic;
+        }
+        tbody tr:nth-child(2n) {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas Grandes</h1>
+    <!--
+    Hierarquia para Tabelas Grandes
+    table
+        section (como se fosse o título ou legenda da tabela)
+        thead
+            tr, td, th
+        tbody
+            tr, td, th
+        tfoot
+            tr, td, th
+            No th tem o atributo scope, se o dado estiver embaixo na tabela é: scope="col", pq o scope se refere ao dado que está na coluna, se estiver o dado ao lado do th, igual no tfoot, o dado está na mesma linha, ai nesse caso na tabela fica: scope="row".
+
+            Efeito zebrado tr:nth-child(2n) -> no () da pra colocar odd ou 2n -1, even ou 2n, 3n, 4n esse último depende o intervalo q voce quer para estilizar.
+
+            cabeçalho da tabela fixo
+            table fica com position: relative;
+            agora o cabeçalho(parte que vamos fixar), vai ficar:
+                thead > tr > th {
+                    position: sticky; -> para grudar na parte de cima
+                    top: -1px; parericodo com o absolute tem posições como top, -1 encaixa perfeitamente na parte de cima
+                    background-color: lightblue; -> aqui se repete o background se nao apenas ox textos ficam fixados.
+                }
+    -->
+    <table>
+        <section>População das Unidades Federativas</section>
+        <thead>   
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col"  style="width: 100px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46 179 008</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 460 311</td>  
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 225 410</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 889 472</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 952 456</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 233 317</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 583 176</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 302 211</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 756 324</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">8 312 759</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 495 033</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 024 557</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>           
+                <td class="num">4 360 926</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 182 828</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 150 692</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 950 330</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 463 737</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 392 617</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 221 128</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">3 009 996</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 946 317</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 307 255</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 757 338</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 595 994</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">887 794</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">809 953</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">761 012</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">214 211 951</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h1>Deixo aleatório para rolar a tabela</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus assumenda labore eum, inventore ea commodi eaque cum expedita magni architecto nesciunt sint omnis laudantium asperiores molestiae ducimus provident, enim maiores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste molestias nemo libero! Molestias consequuntur ratione laborum corrupti dicta animi delectus quia hic illum esse aliquam, dolorum temporibus quis accusantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi pariatur sunt laborum, illum dignissimos neque libero? Ducimus nesciunt, sit aperiam culpa, et delectus eum maiores labore fugit blanditiis aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quisquam doloremque tempore, et quidem unde nesciunt nostrum harum, quaerat corrupti incidunt ullam ducimus aspernatur id ipsa laborum pariatur hic deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias, sunt inventore, veniam officia ullam nostrum fugit reiciendis maxime voluptatibus voluptatem nulla placeat aliquid cumque architecto asperiores eius repudiandae cupiditate!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus assumenda labore eum, inventore ea commodi eaque cum expedita magni architecto nesciunt sint omnis laudantium asperiores molestiae ducimus provident, enim maiores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste molestias nemo libero! Molestias consequuntur ratione laborum corrupti dicta animi delectus quia hic illum esse aliquam, dolorum temporibus quis accusantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi pariatur sunt laborum, illum dignissimos neque libero? Ducimus nesciunt, sit aperiam culpa, et delectus eum maiores labore fugit blanditiis aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quisquam doloremque tempore, et quidem unde nesciunt nostrum harum, quaerat corrupti incidunt ullam ducimus aspernatur id ipsa laborum pariatur hic deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias, sunt inventore, veniam officia ullam nostrum fugit reiciendis maxime voluptatibus voluptatem nulla placeat aliquid cumque architecto asperiores eius repudiandae cupiditate!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus assumenda labore eum, inventore ea commodi eaque cum expedita magni architecto nesciunt sint omnis laudantium asperiores molestiae ducimus provident, enim maiores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste molestias nemo libero! Molestias consequuntur ratione laborum corrupti dicta animi delectus quia hic illum esse aliquam, dolorum temporibus quis accusantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi pariatur sunt laborum, illum dignissimos neque libero? Ducimus nesciunt, sit aperiam culpa, et delectus eum maiores labore fugit blanditiis aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quisquam doloremque tempore, et quidem unde nesciunt nostrum harum, quaerat corrupti incidunt ullam ducimus aspernatur id ipsa laborum pariatur hic deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias, sunt inventore, veniam officia ullam nostrum fugit reiciendis maxime voluptatibus voluptatem nulla placeat aliquid cumque architecto asperiores eius repudiandae cupiditate!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus assumenda labore eum, inventore ea commodi eaque cum expedita magni architecto nesciunt sint omnis laudantium asperiores molestiae ducimus provident, enim maiores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste molestias nemo libero! Molestias consequuntur ratione laborum corrupti dicta animi delectus quia hic illum esse aliquam, dolorum temporibus quis accusantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi pariatur sunt laborum, illum dignissimos neque libero? Ducimus nesciunt, sit aperiam culpa, et delectus eum maiores labore fugit blanditiis aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quisquam doloremque tempore, et quidem unde nesciunt nostrum harum, quaerat corrupti incidunt ullam ducimus aspernatur id ipsa laborum pariatur hic deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias, sunt inventore, veniam officia ullam nostrum fugit reiciendis maxime voluptatibus voluptatem nulla placeat aliquid cumque architecto asperiores eius repudiandae cupiditate!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus assumenda labore eum, inventore ea commodi eaque cum expedita magni architecto nesciunt sint omnis laudantium asperiores molestiae ducimus provident, enim maiores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste molestias nemo libero! Molestias consequuntur ratione laborum corrupti dicta animi delectus quia hic illum esse aliquam, dolorum temporibus quis accusantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eligendi pariatur sunt laborum, illum dignissimos neque libero? Ducimus nesciunt, sit aperiam culpa, et delectus eum maiores labore fugit blanditiis aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quisquam doloremque tempore, et quidem unde nesciunt nostrum harum, quaerat corrupti incidunt ullam ducimus aspernatur id ipsa laborum pariatur hic deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias, sunt inventore, veniam officia ullam nostrum fugit reiciendis maxime voluptatibus voluptatem nulla placeat aliquid cumque architecto asperiores eius repudiandae cupiditate!</p>
+</body>
+</html>
