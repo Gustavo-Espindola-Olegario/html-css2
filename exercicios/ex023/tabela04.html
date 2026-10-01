@@ -15,20 +15,24 @@
         thead th {
             text-align: center;
         }
+        /*
+            No th tem o atributo scope, se o dado estiver embaixo na tabela é: scope="col", pq o scope se refere ao dado que está na coluna, se estiver o dado ao lado do th na mesma linha, ai nesse caso na tabela fica: scope="row".
+            Diferente da logica do colspan e rowspan, que se expande para colunas ou linhas adjacentes, a lógica do scope é visual, então se o th está em cima de um dado, totalizando uma coluna de dados, é scope="col", se estiver os dados ao lado, é scope="row", se estiver o dados como a coluna Filmes, e embaixo tem colunas agrupadas, scope="colgroup". se estiver linhas agupadas igual no dados Mulheres, é scope="rowgroup", lógica visual"
+        */
     </style>
 </head>
 <body>
     <table>
         <thead>
             <tr>
-                <th>Grupo</th>
-                <th>Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
                 <td>Ana</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -47,7 +51,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
+                <th rowspan="3" scope="rowgroup">Homens</th>
                 <td>Bruno</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>

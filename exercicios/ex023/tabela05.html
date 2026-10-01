@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios na  Tabela</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .cnome {
+            background-color: lightblue;
+        }
+        .csexo {
+            background-color: aquamarine;
+        }
+        .cidade {
+            background-color: cornflowerblue;
+        }
+        .cprof {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    Se eu quiser estilizar uma coluna inteira, cada tag vai ter q receber uma classe dentro da tag, numa tabela com 500 linha dentro de apenas uma coluna fica inviável, no HTML5 criaram a tag <colgroup>, e dentro dela cada <col> para referenciar-se a cada coluna se vc quiser colocar, inclusive vc pode usar span="", para aumentar sua estilização, expandindo para colunas adjacentes. 
+    exemplos abaixo:
+    -->
+    <h1>Cadastro</h1>
+    <table>
+        <colgroup>
+        <col class="cnome">
+        <col class="csexo">
+        <col class="cidade">
+        <col class="cprof">
+        </colgroup>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>21</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Taxista</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>M</td>
+            <td>67</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>23</td>
+            <td>Nutricionista</td>
+        </tr>
+    </table>
+    <h2>Exemplo 2: Cadastro</h2>
+        <table>
+        <col class="cnome">
+        <col class="csexo">
+        <col class="cidade" span="2">
+        </colgroup>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>21</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Taxista</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>M</td>
+            <td>67</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>23</td>
+            <td>Nutricionista</td>
+        </tr>
+    </table>
+</body>
+</html>
