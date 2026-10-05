@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de Iframe</title>
+    <style>
+        iframe {
+            width: 500px;
+            height: 500px;
+        }
+        #iframe-especifico {
+            border: 1px solid black;
+        }
+        /* Por regra os estilos tem maios poder nesse nivel, inline, estilos interior e estilos exterior, mas o iframe é uma exceção, os estilos interior sobrepoem o inline.*/
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de Iframes</h1>
+    <p>Acessando o site do 
+        <!-- 
+
+        scrolling="yes" -> tem scrolling
+        scrolling="no"  -> não tem scrolling
+        scrolling="auto" -> exibe as barras de rolagem em um elemento (como um iframe) apenas quando o conteúdo de dentro é maior do que o espaço visível disponível.
+        frameborder recebe 0, sem borda e 
+        frameborder recebe 1 ou qualquer outro número que é pra ter bordar.
+        -->
+        <iframe src="https://www.cursoemvideo.com/" frameborder="0" scrolling="no" height="100px" width="100px">
+            Esse texto não vai aparecer se o iframe funcionar perfeitamente, a dica é sempre deixar uma ancora
+        </iframe> para aprender a programar</p>
+    <p>O site do 
+        <iframe src="https://www.google.com/" frameborder="1" id="iframe-especifico">
+            <a href="https://www.google.com/ " target="_blank">Google</a>
+        </iframe> também é muito bom</p>
+        <p>O meu repositório no
+        <iframe src="https://github.com/Gustavo-Espindola-Olegario" frameborder="1" id="iframe-especifico">
+            <a href="https://github.com/Gustavo-Espindola-Olegario" target="_blank">Github</a>
+        </iframe> também é muito bom</p>
+</body>
+</html>
