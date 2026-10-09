@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes com Segurança</title>
+</head>
+<body>
+    <!-- 
+    O iframe é uma porta para outro site ou documento seu, realizar formas de segurança neles são necessários!
+    Os atributos sandbox e referrerpolicy são utilizados na linguagem HTML para aumentar a segurança e a privacidade de uma página web, controlando o comportamento de links, formulários e, principalmente, de conteúdos incorporados através de <iframe>.
+    
+    De forma bem simples, sandbox (caixa de areia) é um mecanismo de segurança que isola um programa ou código do resto do sistema
+        • allow-scripts: Permite que o site dentro do iframe execute código JavaScript []. Sem isso, qualquer script é bloqueado [].
+        • allow-forms: Permite que o site envie formulários [].
+        • allow-same-origin: Permite que o iframe seja tratado como se fosse do mesmo site de origem []. Isso é necessário para que ele consiga acessar cookies, localStorage ou fazer requisições para o próprio servidor dele [].
+        • allow-popups: Permite que o iframe abra janelas pop-up ou novas abas (usando window.open() ou target="_blank") [].
+        • allow-popups-to-escape-sandbox: Permite que as janelas pop-up abertas pelo iframe não fiquem presas nas restrições da sandbox (elas abrem livres) [].
+        • allow-top-navigation: Permite que o iframe mude a página do site principal (o site "mãe" onde o iframe está embutido) [].
+        • allow-top-navigation-by-user-activation: Igual ao anterior, mas a página principal só muda se o usuário clicar fisicamente em algo dentro do iframe (evita redirecionamentos automáticos e maliciosos) [].
+        • allow-downloads: Permite que o usuário faça downloads de arquivos de dentro do iframe [].
+        • allow-modals: Permite que o iframe abra janelas nativas de alerta (como alert(), confirm(), etc.).
+        • allow-presentation: Permite que o iframe inicie uma sessão de apresentação (como transmitir para uma TV ou Chromecast).
+        • allow-pointer-lock: Permite que o iframe use APIs para travar o movimento do mouse na tela (muito usado em jogos 3D via navegador).
+    
+    De forma bem direta, o referrerpolicy (política de referência) é uma configuração de privacidade e segurança que controla o quanto do seu endereço web é compartilhado com outros servidores, ou seja, dos dados que podem ser vazados ou não.
+        • no-referrer: Privacidade máxima. Nenhuma informação de origem é enviada. O site de destino não saberá de qual página ou site o usuário veio.
+        • no-referrer-when-downgrade: Comportamento padrão antigo. Envia a URL completa se o destino for seguro (HTTPS -> HTTPS). Se você estiver em um site seguro e clicar em um link para um site não seguro (HTTPS -> HTTP), nenhuma informação é enviada.
+        • origin: Envia apenas o domínio principal (o endereço base), omitindo o caminho exato da página.
+        • Exemplo: Se o usuário estava em https://meusite.com, o site de destino recebe apenas https://meusite.com.
+        • origin-when-cross-origin: Envia a URL completa se o link for para o seu próprio site. Se for para um site externo (cross-origin), envia apenas o domínio principal.
+        • same-origin: Envia a URL completa se o link for para o seu próprio site. Se for para um site externo, não envia nada.
+        • strict-origin: Envia apenas o domínio principal (como o origin), mas apenas se a segurança for mantida (HTTPS -> HTTPS). Se o destino for HTTP, não envia nada.
+        • strict-origin-when-cross-origin: O padrão dos navegadores modernos. Envia a URL completa para páginas do mesmo site. Para sites externos, envia apenas o domínio se for de HTTPS para HTTPS. Se o destino for HTTP, não envia nada.
+        • unsafe-url: Inseguro. Envia sempre a URL completa (domínio + caminho exato da página), mesmo se você estiver saindo de um site seguro (HTTPS) para um site vulnerável (HTTP). Pode vazar dados sensíveis contidos na barra de endereço.
+    -->
+    <h1>Site Principal</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis fugit dolore optio atque assumenda in quasi voluptates culpa sapiente molestias explicabo harum, totam nemo consectetur dolorum provident? Inventore, fugiat vel.</p>
+    <iframe src="paginas-extras/pag04.html" frameborder="1" height="300px" sandbox="allow-forms allow-same-origin allow-scripts" referrerpolicy="no-referrer">
+        <p>desculpe, iframe não acessível pelo seu navegador :/</p>
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae qui ipsum et sunt reprehenderit quas voluptates possimus! Esse consequuntur, eum cum, facere dolorem, adipisci assumenda dolor repellendus aperiam temporibus labore.</p>
+</body>
+</html>

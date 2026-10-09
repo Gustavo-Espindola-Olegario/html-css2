@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframes</title>
+    <style>
+        iframe {
+            width: 97vw;
+            height: 500px;
+            border-radius: 15px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Dentro do iframe no src="", se vc colocar #, vc está se referindo ao mesmo caminho da página q vc está usando agora. como colocar o próprio site dentro dele mesmo.
+
+
+    -->
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi rerum eum cum perferendis obcaecati nemo ullam natus quibusdam blanditiis corrupti autem, illo tenetur, doloribus recusandae, exercitationem esse accusamus maiores iusto!</p>
+    <ul>
+        <li><a href="paginas-extras/pag01.html" target="iframe">Site 1</a></li>
+        <li><a href="paginas-extras/pag02.html" target="iframe">Site 2</a></li>
+        <li><a href="paginas-extras/pag03.html" target="iframe">Site 3</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime provident unde non optio assumenda minus quasi iusto pariatur ipsam commodi, obcaecati alias, adipisci eveniet minima aperiam quod omnis, tempora asperiores.</p>
+    <!-- 
+        src="" -> Carregar uma página externa por meio de um link
+        srcdoc="" ->  Especifica o conteúdo HTML diretamente dentro da própria tag, funciona basicamente como um "documento inline", permitindo que você injete HTML, CSS e JavaScript diretamente no iframe
+        Dica bonus, "" aqui é '', aspas simples devido estar dentro de aspas duplo!
+    -->
+    <iframe name="iframe" frameborder="0" srcdoc="<h1>Um Título Qualquer</h1> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque possimus nisi facilis culpa vero dolorum numquam! Assumenda praesentium modi corrupti optio, dolorum, omnis ut voluptates accusantium explicabo deserunt, corporis amet.</p> <img src='imagens/foto.jpg' alt='foto curso em video' width='100%'>">
+        <p>Infelizmente navegador não suportar o iframe</p>
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, molestias eaque officia optio odio dignissimos nisi, quos, animi maiores perferendis illum facere blanditiis. Ipsa beatae doloremque error quos adipisci perferendis!</p>
+</body>
+</html>
