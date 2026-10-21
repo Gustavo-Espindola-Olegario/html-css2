@@ -62,6 +62,24 @@ Continuação do curso de HTML e CSS Parte 2
 <a href="exercicios/ex022/fundo004.html">Exercicio 22 D</a>
 <a href="exercicios/ex022/fundo005.html">Exercicio 22 E</a>
 <br>
+<a href="exercicios/ex023/tabela01.html">Exercicio 23 A</a>
+<a href="exercicios/ex023/tabela02.html">Exercicio 23 B</a>
+<a href="exercicios/ex023/tabela03.html">Exercicio 23 C</a>
+<a href="exercicios/ex023/tabela04.html">Exercicio 23 D</a>
+<a href="exercicios/ex023/tabela05.html">Exercicio 23 E</a>
+<a href="exercicios/ex023/tabela06.html">Exercicio 23 F</a>
+<br>
+<a href="exercicios/ex024/iframe01.html">Exercicio 24 A</a>
+<a href="exercicios/ex024/iframe03.html">Exercicio 24 C</a>
+<a href="exercicios/ex024/iframe02.html">Exercicio 24 B</a>
+<a href="exercicios/ex024/iframe04.html">Exercicio 24 D</a>
+<a href="exercicios/ex024/iframe05.html">Exercicio 24 E</a>
+<a href="exercicios/ex024/iframe06.html">Exercicio 24 F</a>
+<br>
+<a href="exercicios/ex025/form001.html">Exercicio 25 A</a>
+<a href="exercicios/ex025/form002.html">Exercicio 25 C</a>
+<a href="exercicios/ex025/form003.html">Exercicio 25 B</a>
+<br>
 
 
 <br>
