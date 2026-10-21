@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de formulário</title>
+    <style>
+        div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    • required: Torna o preenchimento deste campo obrigatório. O formulário não pode ser enviado vazio.
+    • minlength="10" e maxlength="30": Validações de tamanho. O nome inserido deve ter no mínimo 10 caracteres e no máximo 30.
+    • size="15": Define a largura visual da caixa de texto na tela (aproximadamente o espaço de 15 caracteres).
+    • placeholder="Nome usuário": Exibe um texto cinza de dica dentro do campo, que desaparece assim que o usuário começa a digitar.
+    • autocomplete="username": Ajuda os gerenciadores de senhas e navegadores a entenderem que este campo recebe o nome de usuário do cadastro.
+    
+    • <input type="password">: Cria um campo de texto protegido. Tudo o que for digitado aqui será ocultado por asteriscos ou bolinhas.
+    • autocomplete="current-password": Indica ao navegador ou gerenciador de senhas que este campo deve ser preenchido com a senha atual daquela conta. (Nota: Para formulários de cadastro novo, o ideal técnico seria usar new-password, mas o current-password funciona para login).
+
+    • <input type="reset">: Cria um botão de limpeza. Se clicado, apaga instantaneamente tudo o que foi digitado em todos os campos do formulário.
+    -->
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="idnome">Usuário</label>
+            <input type="text" name="nome" id="idnome" required minlength="10" maxlength="30" size="15" placeholder="Nome usuário" autocomplete="username">
+        </div>
+        <div>
+            <label for="idsenha">Senha</label>
+            <input type="password" name="senha" id="idsenha" required minlength="10" maxlength="20" size="15" placeholder="Senha Usuário" autocomplete="current-password">
+        </div>
+        <div>
+            <input type="submit" value="cadastrar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

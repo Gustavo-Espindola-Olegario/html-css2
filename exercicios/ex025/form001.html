@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!--
+    • action="cadastro.php": Especifica o destino dos dados. Quando o usuário clicar em cadastrar, as informações serão enviadas para o arquivo cadastro.php processá-las.
+    • autocomplete="off": Desativa o preenchimento automático do navegador. Isso impede que o navegador sugira nomes ou sobrenomes digitados anteriormente em outros sites.
+    • method="get": Define o método HTTP de envio. O modo get anexa os dados diretamente no final da URL da página (ex: cadastro.php?nome=João&sobrenome=Silva), geralmente o limite de 2000 até 8000 mil bytes para pesquisar(volume baixo de dados), dá para copiar e compartilhar a url de pesquisa para outra pessoa, não pode usar para dados sensiveis como senhar e dados sigilosos, tampouco para fotos q são pesadas.
+    • method="post": Define o método HTTP de envio. Ao contrário do get (que mostra tudo na URL), o modo post empacota os dados e os envia escondidos por dentro da requisição. A URL do seu navegador continuará limpa (apenas cadastro.php), tornando o processo muito mais seguro para cadastros, mas vc consegue ver esses dados na página do google, aperte f12, vá em network, vá no documento php (cadastro.php), vá em payload, ali estão seus dados, segurança total, só com http ou melhor, https! Além disso aguenta volume de dados pesados. É usado para dados sensíveis como senhas e dados sigilosos e para fotos e volume de daos pesados.
+
+    • for="idnome": Vincula o texto ao campo de entrada que possui o id="idnome". Se o usuário clicar na palavra "Nome", o cursor saltará automaticamente para dentro da caixa de texto.
+    • <input type="text">: Cria uma caixa de texto de linha única para digitação.
+    • name="nome": É o identificador que o servidor (PHP e HTML) vai usar para reconhecer este dado. Sem o name, o valor digitado não é enviado(Foco no Servidor / Backend).
+    • id="idnome": É o identificador exclusivo do elemento na página, usado aqui para fazer o par com o for do <label> e serve pro javascript entender o dado (Foco no Navegador / Frontend).
+
+    • type="submit": Transforma este input em um botão de envio. Ao ser clicado, ele dispara o gatilho que junta todos os dados dos campos internos e os despacha para o endereço definido no action do <form>.
+    • value="Cadastrar": Define o texto que aparece escrito dentro do botão para o usuário.
+    
+    -->
+    <form action="cadastro.php" autocomplete="off" method="get">
+        <label for="idnome">Nome</label>
+        <input type="text" name="nome" id="idnome">
+        <br>
+        <label for="idsobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="idsobrenome">
+        <br>
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
