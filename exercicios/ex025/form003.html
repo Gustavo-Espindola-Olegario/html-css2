@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    • autocomplete="name": Sugere especificamente o nome salvo no perfil do navegador do usuário.
+
+    • <input type="number">: Restringe o campo apenas para a digitação de números e adiciona setas para aumentar/diminuir o valor.
+    • step="0.1": Define o intervalo de incremento/decremento. Permite números decimais com uma casa pós a vírgula (ex: 7.5, 8.2), podendo ser 0.1, 0.5, 1.5, depende de vc.
+
+    • <input type="month">: Abre um seletor visual focado apenas em escolher o mês e o ano (ignora o dia).
+    • value="2026-10": Define o valor padrão inicial do campo como Outubro de 2026.
+    
+    • <input type="date">: Cria um calendário nativo para o usuário selecionar um dia, mês e ano específicos.
+    • value="2026-10-21": Define a data padrão inicial como 21 de Outubro de 2026.
+
+    • <input type="time">: Abre um seletor de horas e minutos (e segundos, dependendo do navegador).
+    -->
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <div>
+            <label for="idnome">Nome completo</label>
+            <input type="text" name="nome" id="idnome" required maxlength="30" placeholder="Nome Completo" autocomplete="name">
+        </div>
+        <div>
+            <label for="idmedia">Média</label>
+            <input type="number" name="media" id="idmedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
+        </div>
+        <div>
+            <label for="idmes">Período Letivo</label>
+            <input type="month" name="mes" id="idmes" value="2026-10">
+        </div>
+        <div>
+            <label for="iddia">Dia Da Prova</label>
+            <input type="date" name="dia" id="iddia" value="2026-10-21">
+        </div>
+        <div>
+            <label for="idhora">Horário Da Prova</label>
+            <input type="time" name="hora" id="idhora">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
