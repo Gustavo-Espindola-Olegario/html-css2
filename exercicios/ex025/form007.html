@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!--
+    • <select>: Cria um menu de opções (dropdown).
+    • <optgroup>: Agrupa as opções por categorias. No código, os estados estão divididos geograficamente entre "Região Sul" e "Região Nordeste".
+    • <option>: São as opções que o usuário pode clicar. 
+    • A opção value="" selected é o texto padrão que aparece antes do usuário escolher um estado.
+
+    • A tag <label>: É um elemento de texto interativo na tela. Ela dá nome a um campo do formulário e, se o usuário clicar nela, o navegador ativa ou joga o cursor direto para dentro do campo conectado.
+    • O atributo label="...": É uma configuração interna (ex: no <optgroup>). Ele serve apenas como um título visual fixo para organizar categorias dentro de um menu, e o usuário não consegue clicar nele.
+
+    • <datalist>: Funciona como um "autocompletar". Conforme o usuário digita no campo de texto, o navegador sugere as profissões listadas (Administrador, Desenvolvedor, etc.), mas ainda permite que ele digite algo totalmente diferente se quiser.
+
+    • O atributo list serve para conectar o campo de texto à lista de sugestões que você criou logo abaixo.
+    • <textarea>: Cria uma caixa de texto grande com várias linhas, ideal para mensagens longas ou comentários. Os atributos cols="30" e rows="10" definem o tamanho inicial dessa caixa (largura e altura).
+
+        
+    -->
+    <h1>Exemplo de Formulário</h1>
+    <form action="programa.php" method="post" autocomplete="on">
+        <fieldset>
+            <label for="idestado">Estado</label>
+            <select name="estado" id="idestado">
+                <option value="" selected>---Escolha---</option>
+                <optgroup label="Região Sul">
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande Do Sul</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="RN">Rio Grande Do Norte</option>
+                    <option value="Ba">Bahia</option>
+                    <option value="CE">Ceara</option>
+                </optgroup>
+            </select>
+            <div>
+                <label for="idprofissao">Profissão</label>
+                <input type="text" name="profissao" id="idprofissao" list="listaprofissao">
+                <datalist id="listaprofissao">
+                    <option>Administrador</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                    <option>Construtor</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="idmensagem">Mensagem: </label>
+                <textarea name="mensagem" id="idmensagem" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
