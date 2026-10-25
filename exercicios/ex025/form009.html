@@ -7,5 +7,19 @@
 </head>
 <body>
     <h1>Exemplo De Formulário</h1>
+    <form action="programa.php" method="get" autocomplete="on">
+        <div>
+            <fieldset>
+                <legend>Informa sua Idade</legend>
+                <label for="ididade">Idade</label>
+                <input type="range" name="idade" id="ididade" min="0" max="125" value="0" oninput="idsaida.innerHTML = Number(ididade.value)">
+                <output id="idsaida">0</output>
+            </fieldset>
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
 </body>
 </html>

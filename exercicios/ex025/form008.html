@@ -6,6 +6,16 @@
     <title>Formulário</title>
 </head>
 <body>
+    <!--
+	• oninput="...": Evento JavaScript executado em tempo real toda vez que o usuário digita algo. Ele converte os valores dos dois campos para números (Number()), soma e coloca o resultado dentro do elemento idsoma.
+
+    • **<input type="number" name="numero2" id="idnumero2" min="0" max="100" required oninput="idsoma.innerHTML = Number(idnumero1.value) + Number(idnumero2.value)">**
+	• Faz exatamente o mesmo que o primeiro campo, mas armazena o valor em numero2 e repete a lógica de soma em tempo real.
+
+    • **<output name="soma" id="idsoma">0</output>**
+	• <output>: Elemento HTML ideal para exibir resultados de cálculos. Começa exibindo o valor padrão 0. O JavaScript altera o texto interno dele via ID idsoma.
+
+    -->
     <h1>Exemplo De Formulário</h1>
     <form action="programa.php" method="get" autocomplete="on">
         <div>
