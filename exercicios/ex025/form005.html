@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!--
+    • type="radio": Cria um botão de opção (Radio Button), limitando o usuário a escolher apenas uma alternativa dentro do grupo.
+    • name="sexo": Une os botões de opção no mesmo grupo, garantindo que ao marcar um, o outro seja desmarcado automaticamente.
+    • id="idmasc" e id="idfemi": Definem identificadores únicos para cada botão, permitindo a vinculação direta com seus respectivos textos.
+    • checked: Define que o botão de opção correspondente ao sexo "Feminino" virá pré-selecionado por padrão assim que a página carregar.
+    • name="sexo": Une os botões de opção no mesmo grupo, garantindo que ao marcar um, o outro seja desmarcado automaticamente.
+    • type="checkbox": Cria uma caixa de seleção (Checkbox), permitindo que o usuário escolha múltiplas opções simultaneamente ou nenhuma.
+    -->
+    <h1>Exemplo de Formulário</h1>
+    <form action="programa.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="idmasc" value='M'><label for="idmasc">Masculino</label>
+            <br>
+            <input type="radio" name="sexo" id="idfemi" value="F" checked><label for="idfemi">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="bas" id="idbas"><label for="idbas">Basquete</label><br>
+            <input type="checkbox" name="fut" id="idfut"><label for="idfut">Futebol</label><br>
+            <input type="checkbox" name="nat" id="idnat"><label for="idnat">Natação</label><br>
+            <input type="checkbox" name="ten" id="idten"><label for="idten">Tênis</label>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

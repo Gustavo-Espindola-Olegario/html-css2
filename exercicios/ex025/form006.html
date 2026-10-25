@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!--
+    • type="color": Cria um seletor de cores interativo. Ao clicar nele, o navegador abre uma paleta para o usuário escolher uma cor.
+    • value="#11ffff": Define a cor padrão inicial (um tom de ciano/azul-piscina em código hexadecimal) que já vem selecionada ao carregar a página.
+
+    • min="0": Define o menor valor possível que o usuário pode selecionar no controle deslizante.
+    • max="10": Define o maior valor possível que o usuário pode selecionar no controle deslizante.
+    • value="5": Define a posição inicial padrão do controle deslizante bem no meio do intervalo (valor 5) ao carregar a página.
+
+    • type="file": Cria um botão de upload de arquivos, permitindo que o usuário selecione um arquivo (como uma imagem) do seu próprio dispositivo.
+    • enctype="multipart/form-data": É o atributo que avisa o navegador como empacotar os dados. Ele deve sair do <input> e ir para o <form>, caso contrário o upload não vai funcionar.
+    -->
+    <h1>Exemplo de Formulário</h1>
+    <form action="programa.php" method="post" autocomplete="on">
+        <fieldset>
+            <div>
+                <label for="idcor">Cor: </label>
+                <input type="color" name="cor" id="idcor" value="#11ffff">
+            </div>
+            <div>
+                <label for="idnivel">Nivel de Satisfação</label>
+                <input type="range" name="nivel" id="idnivel" min="0" max="10" value="5">
+            </div>
+            <div>
+                <label for="idfoto">Foto do Perfil: </label>
+                <input type="file" name="foto" id="idfoto" enctype="multipart/form-data">
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>

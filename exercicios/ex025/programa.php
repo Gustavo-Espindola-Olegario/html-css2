@@ -1,0 +1,1 @@
+exemplo de texto em arquivo PHP
