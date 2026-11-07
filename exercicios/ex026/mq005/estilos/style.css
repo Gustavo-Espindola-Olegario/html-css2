@@ -1,0 +1,80 @@
+@charset "UTF_8";
+
+/* Versão Mobile First */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #C7C7C6;
+}
+
+header {
+    background-color:#8e8e8e;
+}
+
+h1 {
+    text-align: center;
+    padding: 5px;
+}
+#listamenu > li {
+    list-style: none;
+    text-align: center;
+    background-color: #6a6a6a;
+    color: white;
+    padding: 10px;
+    border: 1px solid #2e2d2d;
+}
+
+a { 
+    text-decoration: none;
+    color: whitesmoke;
+    /* Cria uma borda invisível para o texto não pular quando o hover ativar */
+    border-bottom: 2px solid transparent; 
+    /* Define o tempo do efeito (mude para 0.8s se quiser ainda mais lento) */
+    transition: border-color 0.6s ease-in-out; 
+}
+
+li > a:hover {
+    /* A linha surge suavemente com a cor desejada */
+    border-bottom-color: whitesmoke; 
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+h2 {
+    padding: 5px;
+}
+
+p {
+    text-indent: 20px;
+    padding: 10px;
+}
+
+#localizacao {
+    text-align: center;
+}
+iframe {
+    width: 100%;
+}
+
+footer {
+    background-color: #2e2d2d;
+    color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+footer li {
+    list-style: none;
+}

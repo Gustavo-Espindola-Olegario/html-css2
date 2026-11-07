@@ -1,0 +1,51 @@
+@charset "UTF_8";
+
+/* Versão Mobile First */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* 
+O código box-sizing: border-box; define como o CSS calcula a largura (width) e a altura (height) de um elemento.
+
+que ele faz na prática?
+• O padrão do navegador (content-box): Se você cria uma caixa com width: 100px e adiciona padding: 20px ou border: 5px, o navegador soma esses valores ao tamanho final. A caixa acaba tendo 100px + 20px (esquerda) + 20px (direita) + bordas = 140px (estourando o layout que você planejou).
+• Com border-box: O tamanho que você declara (width: 100px) passa a ser o tamanho total absoluto da caixa. Se você colocar padding ou border, o navegador espreme o conteúdo interno para dentro desses mesmos 100px, em vez de fazer a caixa crescer.
+*/
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: black url("../imagens/back-phone.jpg")  center center / cover no-repeat fixed;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.763);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 90vw;
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#telefone {display: block;}
+#tablet {display: none;}
+#impressora {display: none;}
+#pc {display: none;}
+#tv {display: none;}
