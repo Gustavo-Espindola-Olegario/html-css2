@@ -6,11 +6,13 @@
     <title>Site Responsivo</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="mudarTamanho()">
     <header>
         <h1>Meu site</h1>
-        <nav>
+        <span class="material-icons md-36" onclick="clicar()">menu</span>        
+        <nav id="menu">
             <ul id="listamenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servicos">Serviços</a></li>
@@ -54,5 +56,23 @@
             </nav>
         </section>
     </footer>
+    <script>
+        
+        function mudarTamanho() {
+            if(window.innerWidth >= 540) {
+                listamenu.style.display = 'block';
+            }else{
+                listamenu.style.display = 'none';
+            }
+        }
+
+        function clicar() {
+            if(listamenu.style.display == 'block') {
+                listamenu.style.display = 'none';
+            }else{
+                listamenu.style.display = 'block';
+            }
+}
+    </script>
 </body>
 </html>

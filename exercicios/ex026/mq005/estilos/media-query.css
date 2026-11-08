@@ -1,5 +1,38 @@
 @charset "UTF-8";
 
+
+@media screen and (min-width:540px) {
+
+    nav {
+        display: block;
+    }
+    #listamenu > li {
+        list-style: none;
+        display: inline-block;
+        background-color: #6a6a6a;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    span.material-icons {
+        display: none;
+    }
+
+    a { 
+        text-decoration: none;
+        color: whitesmoke;
+        /*Cria uma borda invisível para o texto não pular quando o hover ativar*/
+        border-bottom: 2px solid transparent; 
+        /*Define o tempo do efeito (mude para 0.8s se quiser ainda mais lento)*/
+        transition: border-color 0.6s ease-in-out; 
+    }
+
+    a:hover {
+        /*A linha surge suavemente com a cor desejada*/
+        border-bottom-color: whitesmoke; 
+    }
+}
 /* Todas as demais Mídias */
 
 /*

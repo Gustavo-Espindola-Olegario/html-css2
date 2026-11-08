@@ -11,19 +11,37 @@ body {
     background-color: #C7C7C6;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 header {
     background-color:#8e8e8e;
+    min-height: 72px;
 }
 
 h1 {
     text-align: center;
-    padding: 5px;
+    padding-top: 5px;
+    color: whitesmoke;
 }
+h2,h3,h4,h5 {
+    font-size: 1.5em;
+    text-align: center;
+}
+span{
+    color: whitesmoke;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+
 #listamenu > li {
+    display: block;
     list-style: none;
     text-align: center;
+    font-weight: bold;
     background-color: #6a6a6a;
-    color: white;
     padding: 10px;
     border: 1px solid #2e2d2d;
 }
